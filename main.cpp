@@ -14,10 +14,10 @@ void validate_size(int num)
 		exit(Error::NEG_num);
 	}
 }
-void factorial(int a_num) {
+int factorial(int a_num) {
 	validate_size(a_num);
 	if (a_num == 0) {
-		cout << 0;
+		return 1;
 	}
 	else {
 		int fact = 1;
@@ -25,8 +25,9 @@ void factorial(int a_num) {
 		{
 			fact *= i;
 		}
-		cout << fact;
+		return fact;
 	}
+	
 	
 }
 int main()
@@ -34,7 +35,7 @@ int main()
 	int user_num;
 	cout << "Enter your number: ";
 	cin >> user_num;
-	factorial(user_num);
+	cout << "Factorial: " << factorial(user_num);
 	cout << endl;
 	system("pause");
 	return Error::OK;
