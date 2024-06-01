@@ -41,5 +41,5 @@ int main()
 	rectangle(lenth, height);
 	cout << endl;
 	system("pause");
-	return 0;
+	return Error::OK;
 }
