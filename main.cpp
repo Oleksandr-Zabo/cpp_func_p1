@@ -37,5 +37,5 @@ int main()
 	factorial(user_num);
 	cout << endl;
 	system("pause");
-	return 0;
+	return Error::OK;
 }
