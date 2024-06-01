@@ -13,9 +13,11 @@ void validate_num(int num)
 		exit(Error::zero_num);
 	}
 }
-void factorial(int a_num) {
+bool bigger_zero(int a_num) {
 	validate_num(a_num);
-	(a_num < 0) ? cout << "Number is smaler than 0" : cout << "Number is bigger than 0";
+	bool b_num;
+	(a_num < 0) ? b_num = 0 : b_num = 1;
+	return b_num;
 
 }
 int main()
@@ -23,8 +25,7 @@ int main()
 	int user_num;
 	cout << "Enter your number: ";
 	cin >> user_num;
-	factorial(user_num);
-	cout << endl;
+	cout << bigger_zero(user_num) << endl;
 	system("pause");
 	return Error::OK;
 }
