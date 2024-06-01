@@ -1,10 +1,9 @@
 #include <iostream>
 using namespace std;
-//
 enum Error
 {
 	OK = 1,
-	zero_num =0,
+	zero_num = 0
 };
 void validate_num(int num)
 {
