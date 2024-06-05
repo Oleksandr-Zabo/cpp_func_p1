@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 //
-void find_idial(int first_n, int second_n) {
+void find_idial(int start, int finish) {//6, 28, 496 -idials
 	int sum = 0;
-	if (first_n > second_n) {
-		int temp = first_n;
-		first_n = second_n;
-		second_n = temp;
+	if (start > finish) {
+		int temp = start;
+		start = finish;
+		finish = temp;
 	}
 
-	for (int i = first_n + 1; i < second_n; i++)
+	for (int i = start + 1; i < finish; i++)
 	{
 		for (int j = 1; j < i; j++)
 		{
@@ -30,8 +30,15 @@ void find_idial(int first_n, int second_n) {
 
 int main()
 {
+	int first_num, second_num;
+	cout << "Enter start of range (not in range): ";
+	cin >> first_num;
+	cout << "Enter end of range (not in range): ";
+	cin >> second_num;
 
-	cout << "The end" << endl;
+	find_idial(first_num, second_num);
+
+	cout << endl << "The end" << endl;
 	system("pause");
 	return 0;
 }
